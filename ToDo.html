@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todo</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+  }
+
+  .main {
+    background: linear-gradient(120deg, #09203F, #537895);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .box {
+
+    width: 350px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 60px 40px 190px;
+  }
+
+  h2 {
+    display: flex;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  h2 img {
+    width: 25px;
+    margin-left: 10px;
+  }
+
+  .finput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: solid black 1px;*/
+    height: 40px;
+    border-radius: 30px;
+    background-color: #C6D8D5;
+  }
+
+  input {
+    flex: 1;
+    outline: none;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    padding-left: 10px;
+    background-color: #C6D8D5;
+    background-image: url(unchecked.png) #42445A
+  }
+
+  .in:active {
+    border-style: none;
+  }
+
+  button {
+
+    margin: 0px;
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #EA9282;
+    color: white;
+
+  }
+
+  ul li {
+    list-style: none;
+    font-size: 15px;
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    padding: 10px 6px 10px 20px;
+  }
+
+  .addedList {
+    list-style: none;
+    font-size: 19px;
+    margin: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    padding: 10px 6px 10px 20px;
+  }
+
+  ul li::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+
+    height: 15px;
+
+    border-radius: 50%;
+    background-position: center;
+    left: 0px;
+    top: 10px;
+
+    background-image: url(unchecked.png);
+
+    background-size: cover;
+
+  }
+
+  ul li.check {
+    color: #00BA08;
+    /*background-image: url(checked.png)
+    background-size:cover;*/
+
+
+  }
+
+  ul li.check span {
+    color: black;
+  }
+
+  ul li.check::before {
+    background-image: url(checked.png)
+  }
+
+  ul li span {
+    position: absolute;
+    right: 0px;
+
+    top: 5px;
+
+    font-size: 26px;
+
+  }
+
+  ul li span:active {
+    color: red;
+    top: 0px;
+  }
+</style>
+
+<body>
+  <div class="main">
+
+    <div class="box">
+      <h2>My Work List <img src="icon.png"></h2>
+
+
+      <div class="finput">
+        <input type="text" placeholder="Add Work" class="in" value="">
+        <button class="btn">Add</button>
+      </div>
+
+
+      <ul class="uli">
+        <!--    <li class=fli>first</li>
+      <li>first</li>
+      <li>first</li>
+      <li>first</li-->
+
+      </ul>
+
+    </div>
+  </div>
+  <script src="Todo.js"></script>
+</body>
+
+</html>
